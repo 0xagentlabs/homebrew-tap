@@ -1,3 +1,5 @@
+
+# brew install --cask 0xagentlabs/tap/eye-sentry
 cask "eye-sentry" do
   version "0.1.7"
   sha256 arm: "9449d28a31906d95acd79d2b9c8cd4fb75e2b13f6c4c4c2132b4473ff8ea0946",
@@ -13,6 +15,11 @@ cask "eye-sentry" do
 
   app "eye-sentry.app"
 
+
+  preflight do
+    echo "Preflight"
+  end
+
   postflight do
     app_path = appdir/"eye-sentry.app"
     if app_path.exist?
@@ -23,4 +30,4 @@ cask "eye-sentry" do
     system_command "/usr/bin/open",
       args: ["-a", app_path.to_s]
   end
-end
+end·

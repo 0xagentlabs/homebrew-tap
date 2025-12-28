@@ -1,4 +1,4 @@
-# brew install --formula 0xagentlabs/tap/example
+# brew install --formula 0xagentlabs/tap/mybrewtool
 class Mybrewtool < Formula
     desc "Mybrewtool CLI"
     homepage "https://mybrewtool.com"
@@ -8,7 +8,7 @@ class Mybrewtool < Formula
       url "https://mybrewtool.com/example_0.1.7_darwin_arm64.tar.gz"
       sha256 "ARM_SHA256"
     end
-  ·
+  
     on_intel do
       url "https://mybrewtool.com/example_0.1.7_darwin_x86_64.tar.gz"
       sha256 "INTEL_SHA256"
